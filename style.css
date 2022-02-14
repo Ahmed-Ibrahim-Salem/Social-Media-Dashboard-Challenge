@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+  --body-bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --Card-bg: hsl(227, 47%, 96%);
+  --heading-text-color: hsl(228, 12%, 44%);
+  --main-text-color: hsl(230, 17%, 14%);
+}
+
+html[data-theme='light'] {
+  --body-bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --Card-bg: hsl(227, 47%, 96%);
+  --heading-text-color: hsl(228, 12%, 44%);
+  --main-text-color: hsl(230, 17%, 14%);
+}
+
+html[data-theme='dark'] {
+  --body-bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --Card-bg: hsl(228, 28%, 20%);
+  --heading-text-color: hsl(228, 34%, 66%);
+  --main-text-color: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,22 +33,35 @@
 body {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  background-color: hsl(230, 17%, 14%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--body-bg);
+  color: var(--main-text-color);
 }
 
 h1 {
   font-size: clamp(1.2rem, 2vw, 3rem);
 }
 
+h2 {
+  font-weight: bolder;
+}
+
 h3 {
   font-size: clamp(.9rem, 2vw, 1.5rem);
-  color: hsl(228, 34%, 66%);
+
+}
+
+h4 {
+  font-size: clamp(.75rem, 2vw, 1rem);
+  font-weight: bolder;
+}
+
+.heading {
+  color: var(--heading-text-color);
 }
 
 .stats-heading {
   margin-top: 0;
-  color: hsl(228, 34%, 66%);
+  /* color: hsl(228, 34%, 66%); */
 }
 
 .statistics-numbers {
@@ -41,29 +78,35 @@ h3 {
   right: -5rem;
 }
 
-
 .card-BG {
-  background: hsl(232, 19%, 15%);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 40rem;
+  bottom: 80%;
   z-index: -1;
-  border-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  background: var(--top-bg);
 }
 
-.nav-BG {
+.top-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, auto));
 }
 
-.dark-mode {
+.dark-mode-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
+@media screen and (min-width: 375px) {
 
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+}
 @media screen and (min-width: 885px) {
   .nav-BG {
     display: grid;
@@ -72,12 +115,17 @@ h3 {
     align-content: center;
   }
 
-  .dark-mode {
-    display: flex;
-    justify-content: end;
+  .card-BG {
+    bottom: 75%;
   }
 
-  .dark-mode>* {
+  .dark-mode-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 0;
+  }
+
+  .dark-mode-container>* {
     padding: 0 1rem;
     margin: 1rem;
   }
@@ -94,13 +142,6 @@ h3 {
   margin: 0 15%;
 }
 
-@media screen and (min-width: 375px) {
-
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  }
-}
-
 .followers-container:nth-child(1) {
   border-top: 4px solid hsl(208, 92%, 53%);
 }
@@ -110,6 +151,9 @@ h3 {
 }
 
 .followers-container:nth-child(3) {
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-image-slice: 1;
 }
 
 .followers-container:nth-child(4) {
@@ -117,7 +161,7 @@ h3 {
 }
 
 .fr-cont {
-  padding: 4rem 0;
+  padding: 5% 0;
 }
 
 .followers-container {
@@ -136,10 +180,9 @@ h3 {
   text-align: center;
 }
 
-
 .items {
   border-radius: 5px;
-  background-color: hsl(228, 28%, 20%);
+  background-color: var(--Card-bg);
 }
 
 .icon {
@@ -154,8 +197,7 @@ h3 {
   color: hsl(356, 69%, 56%);
 }
 
-
-
+/* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -164,7 +206,6 @@ h3 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
 
 /* Toggle Button */
 .switch {
