@@ -51,7 +51,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(.75rem, 2vw, 1rem);
+  font-size:  1rem;
   font-weight: bolder;
 }
 
@@ -61,7 +61,6 @@ h4 {
 
 .stats-heading {
   margin-top: 0;
-  /* color: hsl(228, 34%, 66%); */
 }
 
 .statistics-numbers {
@@ -70,12 +69,6 @@ h4 {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-.second-container-social-icons {
-  position: relative;
-  top: 23px;
-  right: -5rem;
 }
 
 .card-BG {
@@ -90,11 +83,18 @@ h4 {
   background: var(--top-bg);
 }
 
+.containerS {
+  margin: 0 10%;
+}
+.container {
+  display: grid;
+  gap: 1.87rem;
+  text-align: center;
+}
 .top-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, auto));
 }
-
 .dark-mode-container {
   display: flex;
   justify-content: space-between;
@@ -102,15 +102,14 @@ h4 {
 }
 
 @media screen and (min-width: 375px) {
-
   .container {
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   }
 }
-@media screen and (min-width: 885px) {
-  .nav-BG {
+@media screen and (min-width: 1200px) {
+  .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     align-content: center;
   }
@@ -129,17 +128,6 @@ h4 {
     padding: 0 1rem;
     margin: 1rem;
   }
-}
-
-.container {
-  display: grid;
-  gap: 1.87rem;
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.containerS {
-  margin: 0 15%;
 }
 
 .followers-container:nth-child(1) {
@@ -185,10 +173,6 @@ h4 {
   background-color: var(--Card-bg);
 }
 
-.icon {
-  padding-bottom: 0;
-}
-
 .up {
   color: hsl(163, 72%, 41%);
 }
@@ -201,6 +185,7 @@ h4 {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-top: 3rem;
 }
 
 .attribution a {
