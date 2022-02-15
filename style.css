@@ -62,6 +62,9 @@ h4 {
 .stats-heading {
   margin-top: 0;
 }
+.second-heading {
+  padding-bottom: 1rem;
+}
 
 .statistics-numbers {
   font-size: 4rem;
@@ -149,7 +152,7 @@ h4 {
 }
 
 .fr-cont {
-  padding: 5% 0;
+  padding: 3% 0;
 }
 
 .followers-container {
