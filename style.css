@@ -141,10 +141,15 @@ h4 {
   border-top: 4px solid hsl(203, 89%, 53%);
 }
 
-.followers-container:nth-child(3) {
-  border-top: 4px solid;
-  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-  border-image-slice: 1;
+.third-child::before {
+  content: "";
+  background: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  display: block;
+  height: 4px;
+  margin-top: -47px;
+  margin-bottom: 46px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .followers-container:nth-child(4) {
