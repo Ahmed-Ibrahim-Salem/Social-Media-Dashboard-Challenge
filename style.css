@@ -51,7 +51,7 @@ h3 {
 }
 
 h4 {
-  font-size:  1rem;
+  font-size: 1rem;
   font-weight: bolder;
 }
 
@@ -62,6 +62,7 @@ h4 {
 .stats-heading {
   margin-top: 0;
 }
+
 .second-heading {
   padding-bottom: 1rem;
 }
@@ -89,15 +90,18 @@ h4 {
 .containerS {
   margin: 0 10%;
 }
+
 .container {
   display: grid;
   gap: 1.87rem;
   text-align: center;
 }
+
 .top-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, auto));
 }
+
 .dark-mode-container {
   display: flex;
   justify-content: space-between;
@@ -109,6 +113,7 @@ h4 {
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   }
 }
+
 @media screen and (min-width: 1200px) {
   .container {
     display: grid;
@@ -133,6 +138,18 @@ h4 {
   }
 }
 
+.social-icons {
+  display: flex;
+  flex-grow: row;
+  justify-content: center;
+  height: 25px;
+}
+
+.social-icons img {
+  margin: 0px 3px;
+  padding-right: 2px;
+}
+
 .followers-container:nth-child(1) {
   border-top: 4px solid hsl(208, 92%, 53%);
 }
@@ -143,11 +160,11 @@ h4 {
 
 .third-child::before {
   content: "";
-  background: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   display: block;
   height: 4px;
-  margin-top: -47px;
-  margin-bottom: 46px;
+  margin-top: -48px;
+  margin-bottom: 47px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -215,10 +232,7 @@ h4 {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: hsl(230, 22%, 74%);
   transition: .4s;
 }
